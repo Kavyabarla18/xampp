@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Student Registration Form</title>
+    <style>
+        body { font-family: Arial, sans-serif; }
+        table { border-collapse: collapse; width: 100%; }
+        td, th { border: 1px solid #aaa; padding: 6px; }
+        .section { background-color: #eee; font-weight: bold; }
+        .no-border { border: none; }
+    </style>
+</head>
+<body>
+    <h2 style="text-align:center;">GAYATRI VIDYA PARISHAD COLLEGE OF ENGINEERING FOR WOMEN(A)</h2>
+    <p style="text-align:center; font-size:13px;">
+        Madhurawada, Visakhapatnam – 530 048<br>
+        (Approved by AICTE, New Delhi and Permanently Affiliated to Andhra University, Visakhapatnam)<br>
+        Accredited by NAAC ‘A’ (from 2022 to 2027) <br>
+        CSE, ECE and IT Courses Accredited by NBA (2019-2022) (Re-accredited by NBA (2022-2025)) <br>
+        CSE (DS) Accredited by NBA (2023-2026)
+    </p>
+    <form>
+        <table>
+            <tr class="section"><td colspan="4">STUDENT PROFILE</td></tr>
+            <tr>
+                <td>H.T. No.</td>
+                <td><input type="text" name="htno"></td>
+                <td>Name of the Student (as per SSC)</td>
+                <td><input type="text" name="student_name"></td>
+            </tr>
+            <tr>
+                <td>Branch</td>
+                <td><input type="text" name="branch"></td>
+                <td>Date of Birth (as per SSC)</td>
+                <td><input type="date" name="dob"></td>
+            </tr>
+            <tr>
+                <td>AADHAR No. (self)</td>
+                <td><input type="text" name="aadhar"></td>
+                <td>Mobile No. (self)</td>
+                <td><input type="text" name="mobile"></td>
+            </tr>
+            <tr>
+                <td>e-mail ID</td>
+                <td colspan="3"><input type="email" name="email" style="width:98%;"></td>
+            </tr>
+            <tr class="section"><td colspan="4">Educational Details</td></tr>
+            <tr>
+                <td><b>SSC / CBSE etc</b><br>% of Marks / Grade</td>
+                <td><input type="text" name="ssc_marks"></td>
+                <td>School of Study & Place</td>
+                <td><input type="text" name="ssc_school"></td>
+            </tr>
+            <tr>
+                <td><b>INTERMEDIATE/+2/DIPLOMA</b><br>% of Marks / Grade</td>
+                <td><input type="text" name="inter_marks"></td>
+                <td>College of Study & Place</td>
+                <td><input type="text" name="inter_college"></td>
+            </tr>
+            <tr class="section"><td colspan="4">Qualifying Examination Details</td></tr>
+            <tr>
+                <td colspan="2" style="text-align:center"><b>EAMCET</b></td>
+                <td colspan="2" style="text-align:center"><b>ECET (Diploma)</b></td>
+            </tr>
+            <tr>
+                <td>H.T. NO</td>
+                <td><input type="text" name="eamcet_htno"></td>
+                <td>H.T. NO</td>
+                <td><input type="text" name="ecet_htno"></td>
+            </tr>
+            <tr>
+                <td>YEAR</td>
+                <td><input type="text" name="eamcet_year"></td>
+                <td>YEAR</td>
+                <td><input type="text" name="ecet_year"></td>
+            </tr>
+            <tr>
+                <td>RANK</td>
+                <td><input type="text" name="eamcet_rank"></td>
+                <td>RANK</td>
+                <td><input type="text" name="ecet_rank"></td>
+            </tr>
+            <tr class="section"><td colspan="4">Admission Details</td></tr>
+            <tr>
+                <td>Category of Admission</td>
+                <td>
+                    <input type="checkbox" name="cat_eamcet">EAMCET
+                    <input type="checkbox" name="cat_spot">SPOT
+                    <input type="checkbox" name="cat_ecet">ECET
+                </td>
+                <td>Nationality & Religion</td>
+                <td><input type="text" name="nationality"></td>
+            </tr>
+            <tr>
+                <td>Caste & Category</td>
+                <td><input type="text" name="caste"></td>
+                <td>State to which belongs (example - AP)</td>
+                <td><input type="text" name="state"></td>
+            </tr>
+            <tr>
+                <td>Availing AP Govt. Fee Reimbursement Scheme</td>
+                <td>
+                    <input type="radio" name="fee_reimbursement" value="yes">YES
+                    <input type="radio" name="fee_reimbursement" value="no">NO
+                    <input type="radio" name="fee_reimbursement" value="ews">EWS
+                </td>
+                <td class="no-border"></td>
+                <td class="no-border"></td>
+            </tr>
+            <tr class="section"><td colspan="4">Details of Parents</td></tr>
+            <tr>
+                <th></th>
+                <th>Father's Name</th>
+                <th>Mother's Name</th>
+                <th></th>
+            </tr>
+            <tr>
+                <td>Qualification</td>
+                <td><input type="text" name="father_qualification"></td>
+                <td><input type="text" name="mother_qualification"></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>Occupation</td>
+                <td><input type="text" name="father_occupation"></td>
+                <td><input type="text" name="mother_occupation"></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>Annual Income</td>
+                <td><input type="text" name="father_income"></td>
+                <td><input type="text" name="mother_income"></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>Land Line (Off/Res)</td>
+                <td><input type="text" name="father_landline"></td>
+                <td><input type="text" name="mother_landline"></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>Mobile No</td>
+                <td><input type="text" name="father_mobile"></td>
+                <td><input type="text" name="mother_mobile"></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>e-mail ID</td>
+                <td><input type="email" name="father_email"></td>
+                <td><input type="email" name="mother_email"></td>
+                <td></td>
+            </tr>
+            <tr class="section">
+                <td colspan="2">PERMANENT ADDRESS</td>
+                <td colspan="2">CONTACT ADDRESS</td>
+            </tr>
+            <tr>
+                <td colspan="2"><textarea name="permanent_address" rows="3" style="width:98%;"></textarea></td>
+                <td colspan="2"><textarea name="contact_address" rows="3" style="width:98%;"></textarea></td>
+            </tr>
+            <tr class="section"><td colspan="4">DETAILS OF HOSTEL (if any) / LOCAL GUARDIAN</td></tr>
+            <tr>
+                <td>
+                    College / Govt. / Outsourced<br>
+                    Name of Hostel<br>
+                    Room Number
+                </td>
+                <td>
+                    <input type="text" name="hostel_college" placeholder="College/Govt/Outsourced"><br>
+                    <input type="text" name="hostel_name" placeholder="Name of Hostel"><br>
+                    <input type="text" name="hostel_room" placeholder="Room No">
+                </td>
+                <td>
+                    Details of Local Guardian<br>
+                    Name<br>
+                    Address<br>
+                    Phone No<br>
+                    Mobile No
+                </td>
+                <td>
+                    <input type="text" name="guardian_name" placeholder="Name"><br>
+                    <input type="text" name="guardian_address" placeholder="Address"><br>
+                    <input type="text" name="guardian_phone" placeholder="Phone No"><br>
+                    <input type="text" name="guardian_mobile" placeholder="Mobile No">
+                </td>
+            </tr>
+            <tr>
+                <td colspan="4" style="text-align:center;">
+                    <button type="submit">Submit</button>
+                    <button type="reset">Reset</button>
+                </td>
+            </tr>
+        </table>
+    </form>
+</body>
+</html>
