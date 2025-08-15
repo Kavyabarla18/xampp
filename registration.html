@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Student Registration Form</title>
+  <style>
+    body { font-family: Arial, sans-serif; margin: 25px; }
+    table { width: 100%; border-collapse: collapse; margin-bottom: 12px; }
+    td, th { border: 1px solid #888; padding: 7px; }
+    th, .section { background: #f2f2f2; font-weight: bold; text-align: center; }
+    input[type="text"], input[type="email"], input[type="date"], textarea { width: 98%; padding: 4px; box-sizing: border-box; }
+    textarea { resize: vertical; }
+    .submit-row { text-align: center; }
+  </style>
+</head>
+<body>
+  <h2 style="text-align:center;">GAYATRI VIDYA PARISHAD COLLEGE OF ENGINEERING FOR WOMEN(A)</h2>
+  <p style="text-align:center;">Madhurawada, Visakhapatnam – 530 048<br>(Approved by AICTE, New Delhi &amp; Permanently Affiliated to Andhra University)</p>
+
+  <form method="POST" action="registration.php" autocomplete="off">
+    <table>
+      <tr class="section"><td colspan="4">STUDENT PROFILE</td></tr>
+      <tr>
+        <td>H T No.</td> <td><input type="text" name="htno" required></td>
+        <td>Name (as per SSC)</td> <td><input type="text" name="student_name" required></td>
+      </tr>
+      <tr>
+        <td>Branch</td> <td><input type="text" name="branch" required></td>
+        <td>Date of Birth</td> <td><input type="date" name="dob" required></td>
+      </tr>
+      <tr>
+        <td>AADHAR No.</td> <td><input type="text" name="aadhar"></td>
+        <td>Mobile No.</td> <td><input type="text" name="mobile" required></td>
+      </tr>
+      <tr>
+        <td>e-mail ID</td><td colspan="3"><input type="email" name="email" required></td>
+      </tr>
+
+      <tr class="section"><td colspan="4">Educational Details</td></tr>
+      <tr>
+        <td>% Marks (SSC/CBSE)</td> <td><input type="text" name="ssc_marks"></td>
+        <td>School & Place</td> <td><input type="text" name="ssc_school"></td>
+      </tr>
+      <tr>
+        <td>% Marks (Inter/+2/Diploma)</td> <td><input type="text" name="inter_marks"></td>
+        <td>College & Place</td> <td><input type="text" name="inter_college"></td>
+      </tr>
+
+      <tr class="section"><td colspan="4">Qualifying Examination Details</td></tr>
+      <tr>
+        <th colspan="2">EAMCET</th>
+        <th colspan="2">ECET (Diploma)</th>
+      </tr>
+      <tr>
+        <td>H T No</td><td><input type="text" name="eamcet_htno"></td>
+        <td>H T No</td><td><input type="text" name="ecet_htno"></td>
+      </tr>
+      <tr>
+        <td>Year</td><td><input type="text" name="eamcet_year"></td>
+        <td>Year</td><td><input type="text" name="ecet_year"></td>
+      </tr>
+      <tr>
+        <td>Rank</td><td><input type="text" name="eamcet_rank"></td>
+        <td>Rank</td><td><input type="text" name="ecet_rank"></td>
+      </tr>
+
+      <tr class="section"><td colspan="4">Admission Details</td></tr>
+      <tr>
+        <td>Category</td>
+        <td>
+          <label><input type="checkbox" name="admit_eamcet" value="EAMCET"> EAMCET</label>
+          <label><input type="checkbox" name="admit_spot" value="SPOT"> SPOT</label>
+          <label><input type="checkbox" name="admit_ecet" value="ECET"> ECET</label>
+        </td>
+        <td>Nationality & Religion</td> <td><input type="text" name="nationality"></td>
+      </tr>
+      <tr>
+        <td>Caste & Category</td><td><input type="text" name="caste"></td>
+        <td>State</td><td><input type="text" name="state"></td>
+      </tr>
+      <tr>
+        <td>AP Govt. Fee Reimbursement?</td>
+        <td colspan="3">
+          <label><input type="radio" name="fee_scheme" value="YES"> YES</label>
+          <label><input type="radio" name="fee_scheme" value="NO"> NO</label>
+          <label><input type="radio" name="fee_scheme" value="EWS"> EWS</label>
+        </td>
+      </tr>
+
+      <tr class="section"><td colspan="4">Details of Parents</td></tr>
+      <tr>
+        <td></td>
+        <td><b>Father</b></td>
+        <td><b>Mother</b></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>Qualification</td>
+        <td><input type="text" name="father_qualification"></td>
+        <td><input type="text" name="mother_qualification"></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>Occupation</td>
+        <td><input type="text" name="father_occupation"></td>
+        <td><input type="text" name="mother_occupation"></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>Annual Income</td>
+        <td><input type="text" name="father_income"></td>
+        <td><input type="text" name="mother_income"></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>Land Line</td>
+        <td><input type="text" name="father_landline"></td>
+        <td><input type="text" name="mother_landline"></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>Mobile No</td>
+        <td><input type="text" name="father_mobile"></td>
+        <td><input type="text" name="mother_mobile"></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>e-mail ID</td>
+        <td><input type="email" name="father_email"></td>
+        <td><input type="email" name="mother_email"></td>
+        <td></td>
+      </tr>
+
+      <tr class="section">
+        <td colspan="2">PERMANENT ADDRESS</td>
+        <td colspan="2">CONTACT ADDRESS</td>
+      </tr>
+      <tr>
+        <td colspan="2"><textarea name="permanent_address" rows="2"></textarea></td>
+        <td colspan="2"><textarea name="contact_address" rows="2"></textarea></td>
+      </tr>
+
+      <tr class="section"><td colspan="4">DETAILS OF HOSTEL / LOCAL GUARDIAN</td></tr>
+      <tr>
+        <td>Hostel Type</td><td><input type="text" name="hostel_type" placeholder="College/Govt/Outsourced"></td>
+        <td>Hostel Name</td><td><input type="text" name="hostel_name"></td>
+      </tr>
+      <tr>
+        <td>Room No</td><td><input type="text" name="hostel_room"></td>
+        <td>Guardian Name</td><td><input type="text" name="guardian_name"></td>
+      </tr>
+      <tr>
+        <td>Guardian Address</td><td colspan="3"><input type="text" name="guardian_address"></td>
+      </tr>
+      <tr>
+        <td>Guardian Phone</td><td><input type="text" name="guardian_phone"></td>
+        <td>Guardian Mobile</td><td><input type="text" name="guardian_mobile"></td>
+      </tr>
+      <tr>
+        <td colspan="4" class="submit-row">
+          <input type="submit" value="Submit">
+          <input type="reset" value="Reset">
+        </td>
+      </tr>
+    </table>
+  </form>
+</body>
+</html>
