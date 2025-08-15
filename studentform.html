@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Student Details Form</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+    body {
+      background: #f1f3f8;
+      font-family: 'Segoe UI', Arial, sans-serif;
+      padding: 0;
+      margin: 0;
+      min-height: 100vh;
+    }
+    .container {
+      background: #fff;
+      max-width: 470px;
+      margin: 36px auto 0 auto;
+      padding: 28px 30px 25px 30px;
+      border-radius: 14px;
+      box-shadow: 0 8px 32px rgba(44,45,70,0.08);
+    }
+    h2 {
+      text-align: center;
+      color: #264d73;
+      margin-bottom: 20px;
+      letter-spacing: 0.02em;
+    }
+    .form-group {
+      margin-bottom: 14px;
+    }
+    label {
+      display: block;
+      font-size: 1.1em;
+      color: #264d73;
+      margin-bottom: 5px;
+      margin-left: 2px;
+    }
+    input, textarea {
+      width: 100%;
+      padding: 8px 10px;
+      background: #f8fafc;
+      border: 1.3px solid #bdd6ec;
+      border-radius: 6px;
+      font-size: 1em;
+      transition: border 0.2s;
+      margin-bottom: 3px;
+    }
+    input:focus, textarea:focus {
+      border-color: #64a5dd;
+      background: #f1f7fd;
+    }
+    textarea {
+      resize: vertical;
+      min-height: 38px;
+      max-height: 100px;
+    }
+    .row {
+      display: flex;
+      gap: 16px;
+    }
+    .row > .form-group {
+      flex: 1 1 0;
+    }
+    .double-row {
+      display: flex;
+      gap: 18px;
+    }
+    .double-row .form-group {
+      flex: 1 1 0;
+    }
+    .form-actions {
+      text-align: center;
+      margin-top: 18px;
+    }
+    button, input[type=submit], input[type=reset] {
+      background: #276db0;
+      color: #fff;
+      padding: 10px 26px;
+      margin: 4px 7px;
+      border: none;
+      border-radius: 5px;
+      font-size: 1.08em;
+      cursor: pointer;
+      transition: background 0.18s, box-shadow 0.18s;
+      box-shadow: 0 1px 6px #dee4eb7e;
+    }
+    button:hover,
+    input[type=submit]:hover {
+      background: #143b6d;
+    }
+    input[type=reset] {
+      background: #90a4ae;
+    }
+    input[type=reset]:hover {
+      background: #607d8b;
+    }
+    @media(max-width:600px) {
+      .container {
+         max-width:95vw; padding:10vw 4vw; margin:8vw 0 0 0;
+      }
+      .row, .double-row { flex-direction:column; gap:8px; }
+      h2 { font-size:1.13em; }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h2>Student Details Form</h2>
+    <form action="studentform.php" method="POST" autocomplete="off">
+      <div class="row">
+        <div class="form-group">
+          <label for="htno">HT No.</label>
+          <input type="text" id="htno" name="htno" required>
+        </div>
+        <div class="form-group">
+          <label for="student_name">Name</label>
+          <input type="text" id="student_name" name="student_name" required>
+        </div>
+      </div>
+      <div class="row">
+        <div class="form-group">
+          <label for="branch">Branch</label>
+          <input type="text" id="branch" name="branch" required>
+        </div>
+        <div class="form-group">
+          <label for="dob">Date of Birth</label>
+          <input type="date" id="dob" name="dob" required>
+        </div>
+      </div>
+      <div class="row">
+        <div class="form-group">
+          <label for="aadhar">AADHAR No.</label>
+          <input type="text" id="aadhar" name="aadhar">
+        </div>
+        <div class="form-group">
+          <label for="mobile">Mobile No.</label>
+          <input type="text" id="mobile" name="mobile" required>
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" required>
+      </div>
+      <div class="double-row">
+        <div class="form-group">
+          <label for="ssc_marks">SSC Marks (%)</label>
+          <input type="text" id="ssc_marks" name="ssc_marks">
+        </div>
+        <div class="form-group">
+          <label for="ssc_school">SSC School &amp; Place</label>
+          <input type="text" id="ssc_school" name="ssc_school">
+        </div>
+      </div>
+      <div class="double-row">
+        <div class="form-group">
+          <label for="inter_marks">Inter Marks (%)</label>
+          <input type="text" id="inter_marks" name="inter_marks">
+        </div>
+        <div class="form-group">
+          <label for="inter_college">Inter College &amp; Place</label>
+          <input type="text" id="inter_college" name="inter_college">
+        </div>
+      </div>
+      <div class="double-row">
+        <div class="form-group">
+          <label for="nationality">Nationality</label>
+          <input type="text" id="nationality" name="nationality">
+        </div>
+        <div class="form-group">
+          <label for="caste">Caste</label>
+          <input type="text" id="caste" name="caste">
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="state">State</label>
+        <input type="text" id="state" name="state">
+      </div>
+      <div class="double-row">
+        <div class="form-group">
+          <label for="father_name">Father's Name</label>
+          <input type="text" id="father_name" name="father_name">
+        </div>
+        <div class="form-group">
+          <label for="father_mobile">Father's Mobile</label>
+          <input type="text" id="father_mobile" name="father_mobile">
+        </div>
+      </div>
+      <div class="double-row">
+        <div class="form-group">
+          <label for="mother_name">Mother's Name</label>
+          <input type="text" id="mother_name" name="mother_name">
+        </div>
+        <div class="form-group">
+          <label for="mother_mobile">Mother's Mobile</label>
+          <input type="text" id="mother_mobile" name="mother_mobile">
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="address">Address</label>
+        <textarea id="address" name="address" rows="2"></textarea>
+      </div>
+      <div class="form-actions">
+        <input type="submit" value="Submit">
+        <input type="reset" value="Reset">
+      </div>
+    </form>
+  </div>
+</body>
+</html>

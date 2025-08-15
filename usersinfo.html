@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>User Registration</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+    body {
+      background: linear-gradient(120deg, #43cea2, #185a9d 100%);
+      min-height: 100vh;
+      font-family: "Segoe UI", Arial, sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin: 0;
+    }
+    .register-box {
+      background: #fff;
+      padding: 32px;
+      width: 340px;
+      border-radius: 12px;
+      box-shadow: 0 8px 32px rgba(44,45,70,0.14);
+    }
+    h2 {
+      text-align: center;
+      color: #185a9d;
+      margin-bottom: 20px;
+    }
+    label {
+      display: block;
+      margin-bottom: 6px;
+      font-weight: bold;
+      color: #185a9d;
+    }
+    input[type="text"],
+    input[type="password"] {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 15px;
+      border-radius: 5px;
+      border: 1.5px solid #aad2e6;
+    }
+    .register-btn {
+      width: 100%;
+      padding: 10px;
+      background: linear-gradient(120deg,#43cea2,#185a9d);
+      border: none;
+      color: white;
+      font-weight: bold;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    .helper {
+      margin-top: 10px;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <form class="register-box" method="POST" action="usersinfo.php">
+    <h2>Create Account</h2>
+    <label for="username">Username</label>
+    <input type="text" name="username" id="username" required>
+
+    <label for="password">Password</label>
+    <input type="password" name="password" id="password" minlength="6" required>
+
+    <button class="register-btn" type="submit">Register</button>
+
+    <div class="helper">
+      Already registered? <a href="#" onclick="document.getElementById('loginForm').style.display='block';return false;">Login here</a>
+    </div>
+  </form>
+
+  <!-- Hidden login form -->
+  <form id="loginForm" class="register-box" method="POST" action="login.php" style="display:none; margin-left: 20px;">
+    <h2>Login</h2>
+    <label for="login-username">Username</label>
+    <input type="text" name="username" id="login-username" required>
+
+    <label for="login-password">Password</label>
+    <input type="password" name="password" id="login-password" required>
+
+    <button class="register-btn" type="submit">Login</button>
+  </form>
+</body>
+</html>
